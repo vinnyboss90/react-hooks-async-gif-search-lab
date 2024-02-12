@@ -7,7 +7,7 @@ const GifListContainer = () => {
 
   const serchGifsFromServer = (searchValue) => {
     fetch(
-      `https://api.giphy.com/v1/stickers/packs/3138/children?api_key=9XMYWQaTnUtH3mDZDIdVX0lM5qAfudJZ`
+      `https://api.giphy.com/v1/gifs/random?api_key=9XMYWQaTnUtH3mDZDIdVX0lM5qAfudJZ&tag=&rating=g`
     )
       .then((resp) => resp.json())
       .then((gifs) => setGifs([...gifs.data.slice(0, 3)]));
